@@ -1,48 +1,121 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b6cce2; 
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .container {
-    width: 70%;
-    margin: auto;
-    text-align: center;
+  width: 80%;
+  max-width: 600px;
+  min-height: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .dice {
-    text-align: center;
-    display: inline-block;
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  body {
-    background-color: #e2e7ee;
-  }
-  
-  h1 {
-    margin: 30px;
-    font-family: 'Lobster', cursive;
-    text-shadow: 5px 0 #232931;
-    font-size: 8rem;
-    color: #4ECCA3;
-  }
-  
-  p {
-    font-size: 2rem;
-    color: #4ECCA3;
-    font-family: 'Indie Flower', cursive;
-  }
-  
-  img {
-    width: 80%;
-  }
-  #rollButton{
-    background-color: #86ceb6;
-    width: 90px;
-    height: 40px;
-    border-radius: 20px;
-  }
-  
-  footer {
-    margin-top: 5%;
-    color: #EEEEEE;
-    text-align: center;
-    font-family: 'Indie Flower', cursive;
-  
-  }
-  
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+
+
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #4ECCA3;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  margin: 15px;
+}
+
+img:hover {
+  transform: scale(1.1); 
+}
+
+
+h1 {
+  margin: 20px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-size: 3.5rem;
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-top: 10px;
+}
+
+#rollButton {
+  background-color: #4ECCA3;
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 20px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#rollButton:hover {
+  background-color: #3aa786; 
+  transform: scale(1.1);
+}
+
+
+footer {
+  margin-top: 20px;
+  color: #777;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.2rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+footer a {
+  color: #4ECCA3;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+  transition: color 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
